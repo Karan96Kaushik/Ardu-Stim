@@ -532,7 +532,7 @@ function updateRPM()
 
 function checkForUpdates()
 {
-    var url = "https://api.github.com/repos/speeduino/Ardu-Stim/releases/latest";
+    var url = "https://api.github.com/repos/Karan96Kaushik/Ardu-Stim/releases/latest";
 
     //document.getElementById('detailsHeading').innerHTML = version;
     
