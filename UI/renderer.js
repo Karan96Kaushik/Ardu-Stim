@@ -161,36 +161,6 @@ function refreshAvailableFirmwares()
     );
 }
 
-function downloadHex()
-{
-
-    var e = document.getElementById('versionsSelect');
-    var DLurl = "http://speeduino.com/fw/bin/" + e.options[e.selectedIndex].value + ".hex";
-    console.log("Downloading: " + DLurl);
-    
-    //Download the Hex file
-    ipcRenderer.send("download", {
-        url: DLurl,
-        properties: {directory: "downloads"}
-    });
-
-}
-
-function downloadIni()
-{
-
-    var e = document.getElementById('versionsSelect');
-    var DLurl = "http://speeduino.com/fw/" + e.options[e.selectedIndex].value + ".ini";
-    console.log("Downloading: " + DLurl);
-
-    //Download the ini file
-    ipcRenderer.send("download", {
-        url: DLurl,
-        properties: {directory: "downloads"}
-    });
-
-}
-
 function uploadFW()
 {
 
