@@ -111,6 +111,7 @@
    FOUR_TWENTY_A,         /* DSM 420a */
    FORD_ST170,            /* Ford ST170 */
    MITSUBISHI_3A92,        /* Mitsubishi 3cylinder 3A92 */
+   HYUNDAI_I10,
    MAX_WHEELS,
  }WheelType;
 
@@ -165,6 +166,7 @@
  const char four_twenty_a_friendly_name[] PROGMEM = "DSM 420a";
  const char ford_st170_friendly_name[] PROGMEM = "Ford ST170";
  const char mitsubishi_3A92_friendly_name[] PROGMEM = "Mitsubishi 3A92";
+ const char hyundai_i10_friendly_name[] PROGMEM = "Hyundai i10";
  
 
  /* Very simple 50% duty cycle */
@@ -1137,6 +1139,23 @@
       1,0,3,2,3,2,3,2,3,2,3,2,
       3,2,2,2,2,2,3,2,3,2,3,2,
       3,2,3,2,3,2,3,2,3,2,3,2
+   };
+
+   const unsigned char hyundai_i10[] PROGMEM = 
+   {
+      0,1,1,1,0,1,0,1,0,1,
+      0,1,0,1,0,1,2,3,2,3,
+      2,3,2,3,2,3,2,3,2,3,
+      2,3,2,3,2,3,2,3,2,3,
+      2,3,2,3,2,3,2,3,2,3,
+      2,3,2,3,2,3,2,3,2,3,
+
+      2,3,3,3,2,3,2,3,2,3,
+      2,3,2,3,2,3,2,3,2,3,
+      2,3,2,3,2,3,2,3,2,3,
+      2,3,2,3,2,3,2,3,2,3,
+      2,3,2,3,2,3,2,3,2,3,
+      2,3,2,3,2,3,2,3,2,3,
    };
 
   #endif

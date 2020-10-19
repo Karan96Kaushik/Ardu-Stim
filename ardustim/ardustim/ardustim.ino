@@ -113,6 +113,7 @@ wheels Wheels[MAX_WHEELS] = {
   { four_twenty_a_friendly_name, four_twenty_a, 0.6, 144, 720 },
   { ford_st170_friendly_name, ford_st170, 0.6, 720, 720 },
   { mitsubishi_3A92_friendly_name, mitsubishi_3A92, 0.6, 144, 720 },
+  { hyundai_i10_friendly_name, hyundai_i10, 1, 120, 720 },
 };
 
 /* Initialization */
