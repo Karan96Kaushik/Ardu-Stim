@@ -452,6 +452,7 @@ function redrawGears(pattern, degrees)
   var style = document.getElementById('wheelDisplaySelect').value
   var crank = document.getElementById('crank');
   var cam = document.getElementById('cam');
+  var third = document.getElementById('third');
   //style = 1;
   if(style == 0)
   {
@@ -464,6 +465,7 @@ function redrawGears(pattern, degrees)
     background.style.backgroundColor = "#0071b8";
     draw_crank_gear(pattern, depth, radius, width, line, halfspeed);
     draw_cam_gear(pattern, depth, radius, width, line);
+    // draw_third_gear(pattern, depth, radius, width, line);
   }
   else
   {
@@ -471,11 +473,14 @@ function redrawGears(pattern, degrees)
     crank.height = 150;
     cam.width = 840;
     cam.height = 150;
+    third.width = 840;
+    third.height = 150;
     depth = 80;
     line = 3;
     background.style.backgroundColor = "#000000";
     draw_crank_scope(pattern, depth, radius, width, line, halfspeed);
     draw_cam_scope(pattern, depth, radius, width, line);
+    draw_third_scope(pattern, depth, radius, width, line);
   }
 
   

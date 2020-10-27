@@ -90,3 +90,47 @@ function draw_cam_scope(toothPattern, depth, radius, width, line) {
   c.lineWidth = line;
   c.stroke();
 }
+
+
+function draw_third_scope(toothPattern, depth, radius, width, line) {
+  var canvas = document.getElementById('third');
+  var c = canvas.getContext('2d');
+
+  c.clearRect(0, 0, canvas.width, canvas.height);
+
+  console.log("TP:", toothPattern)
+  var x = canvas.width / 2;
+  var y = canvas.height / 2
+  var lastEnd = 0;
+  var lastState = 0;
+  var teeth = toothPattern.length * 2;
+  //if(halfspeed) { teeth = teeth * 2; }
+  var toothWidth = (canvas.width / teeth) * 2;
+
+  //depth = (radius / 100) * depth;
+
+  c.beginPath();
+  
+  for (var i = 0; i <= (teeth * 2)-1; i++) {
+    var newEnd;
+    
+    newEnd = lastEnd + toothWidth;
+
+    if (toothPattern[i] == 4 || toothPattern[i] == 5 || toothPattern[i] == 6 || toothPattern[i] == 7) 
+    {
+      if(lastState == 0) { c.lineTo(newEnd, depth); }
+      c.lineTo(newEnd, 0);
+      lastState = 1;
+    } else if (toothPattern[i] == 0 || toothPattern[i] == 1 || toothPattern[i] == 2 || toothPattern[i] == 3) 
+    {
+      if(lastState == 1) { c.lineTo(newEnd, 0); }
+      c.lineTo(newEnd, depth);
+      lastState = 0;
+    }
+    lastEnd = newEnd;
+  }
+  
+  c.strokeStyle = '#0000FF';
+  c.lineWidth = line;
+  c.stroke();
+}
