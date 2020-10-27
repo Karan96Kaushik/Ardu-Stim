@@ -29,13 +29,13 @@ function draw_crank_scope(toothPattern, depth, radius, width, line, halfspeed) {
     
     newEnd = lastEnd + toothWidth;
 
-    if (toothPattern[i] == 1 || toothPattern[i] == 3) 
+    if (toothPattern[i] == 1 || toothPattern[i] == 3 || toothPattern[i] == 5 || toothPattern[i] == 7) 
     {
       if(lastState == 0) { c.lineTo(newEnd, depth); }
       c.lineTo(newEnd, 0);
       lastState = 1;
       
-    } else 
+    } else if (toothPattern[i] == 0 || toothPattern[i] == 2 || toothPattern[i] == 4 || toothPattern[i] == 6) 
     {
       if(lastState == 1) { c.lineTo(newEnd, 0); }
       c.lineTo(newEnd, depth);
@@ -72,12 +72,12 @@ function draw_cam_scope(toothPattern, depth, radius, width, line) {
     
     newEnd = lastEnd + toothWidth;
 
-    if (toothPattern[i] == 2 || toothPattern[i] == 3) 
+    if (toothPattern[i] == 2 || toothPattern[i] == 3 || toothPattern[i] == 6 || toothPattern[i] == 7) 
     {
       if(lastState == 0) { c.lineTo(newEnd, depth); }
       c.lineTo(newEnd, 0);
       lastState = 1;
-    } else 
+    } else if (toothPattern[i] == 0 || toothPattern[i] == 1 || toothPattern[i] == 4 || toothPattern[i] == 5) 
     {
       if(lastState == 1) { c.lineTo(newEnd, 0); }
       c.lineTo(newEnd, depth);
