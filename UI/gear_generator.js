@@ -151,3 +151,12 @@ function draw_cam_gear(toothPattern, depth, radius, width, line) {
   c.lineWidth = line;
   c.stroke();
 }
+
+
+function draw_third_gear(toothPattern, depth, radius, width, line) {
+  var canvas = document.getElementById('third');
+  var c = canvas.getContext('2d');
+
+  c.clearRect(0, 0, canvas.width, canvas.height);
+
+}

@@ -130,7 +130,7 @@ function draw_third_scope(toothPattern, depth, radius, width, line) {
     lastEnd = newEnd;
   }
   
-  c.strokeStyle = '#0000FF';
+  c.strokeStyle = '#00ff00';
   c.lineWidth = line;
   c.stroke();
 }

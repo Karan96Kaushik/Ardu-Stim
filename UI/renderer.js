@@ -465,7 +465,7 @@ function redrawGears(pattern, degrees)
     background.style.backgroundColor = "#0071b8";
     draw_crank_gear(pattern, depth, radius, width, line, halfspeed);
     draw_cam_gear(pattern, depth, radius, width, line);
-    // draw_third_gear(pattern, depth, radius, width, line);
+    draw_third_gear(pattern, depth, radius, width, line);
   }
   else
   {
