@@ -91,9 +91,9 @@ function draw_crank_gear(toothPattern, depth, radius, width, line, halfspeed) {
     start = lastEnd + diff;
     end = newEnd - diff;
 
-    if (toothPattern[i] == 1 || toothPattern[i] == 3 || toothPattern[i] == 5 || toothPattern[i] == 7) {
+    if (toothPattern[i] == 1 || toothPattern[i] == 3 || toothPattern[i] == 5 || toothPattern[i] == 7 || toothPattern[i] == 9 || toothPattern[i] == 0xb || toothPattern[i] == 0xd || toothPattern[i] == 0xf) {
       c.arc(x, y, radius, start, end, false);
-    } else if (toothPattern[i] == 0 || toothPattern[i] == 2 || toothPattern[i] == 4 || toothPattern[i] == 6) {
+    } else if (toothPattern[i] == 0 || toothPattern[i] == 2 || toothPattern[i] == 4 || toothPattern[i] == 6 || toothPattern[i] == 8 || toothPattern[i] == 0xa || toothPattern[i] == 0xc || toothPattern[i] == 0xe) {
       c.arc(x, y, (radius - depth), start, end, false);
     }
     lastEnd = newEnd;
@@ -135,9 +135,9 @@ function draw_cam_gear(toothPattern, depth, radius, width, line) {
     start = lastEnd + diff;
     end = newEnd - diff;
 
-    if (toothPattern[i] == 2 || toothPattern[i] == 3 || toothPattern[i] == 6 || toothPattern[i] == 7) {
+    if (toothPattern[i] == 2 || toothPattern[i] == 3 || toothPattern[i] == 6 || toothPattern[i] == 7 || toothPattern[i] == 0xb || toothPattern[i] == 0xa || toothPattern[i] == 0xf || toothPattern[i] == 0xe) {
       c.arc(x, y, radius, start, end, false);
-    } else if (toothPattern[i] == 0 || toothPattern[i] == 1 || toothPattern[i] == 4 || toothPattern[i] == 5) {
+    } else if (toothPattern[i] == 0 || toothPattern[i] == 1 || toothPattern[i] == 4 || toothPattern[i] == 5 || toothPattern[i] == 8 || toothPattern[i] == 9 || toothPattern[i] == 0xc || toothPattern[i] == 0xd) {
       c.arc(x, y, (radius - depth), start, end, false);
     }
     lastEnd = newEnd;

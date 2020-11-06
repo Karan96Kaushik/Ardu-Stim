@@ -29,13 +29,13 @@ function draw_crank_scope(toothPattern, depth, radius, width, line, halfspeed) {
     
     newEnd = lastEnd + toothWidth;
 
-    if (toothPattern[i] == 1 || toothPattern[i] == 3 || toothPattern[i] == 5 || toothPattern[i] == 7) 
+    if (toothPattern[i] == 1 || toothPattern[i] == 3 || toothPattern[i] == 5 || toothPattern[i] == 7 || toothPattern[i] == 9 || toothPattern[i] == 0xb || toothPattern[i] == 0xd || toothPattern[i] == 0xf) 
     {
       if(lastState == 0) { c.lineTo(newEnd, depth); }
       c.lineTo(newEnd, 0);
       lastState = 1;
       
-    } else if (toothPattern[i] == 0 || toothPattern[i] == 2 || toothPattern[i] == 4 || toothPattern[i] == 6) 
+    } else if (toothPattern[i] == 0 || toothPattern[i] == 2 || toothPattern[i] == 4 || toothPattern[i] == 6 || toothPattern[i] == 8 || toothPattern[i] == 0xa || toothPattern[i] == 0xc || toothPattern[i] == 0xe) 
     {
       if(lastState == 1) { c.lineTo(newEnd, 0); }
       c.lineTo(newEnd, depth);
@@ -72,12 +72,12 @@ function draw_cam_scope(toothPattern, depth, radius, width, line) {
     
     newEnd = lastEnd + toothWidth;
 
-    if (toothPattern[i] == 2 || toothPattern[i] == 3 || toothPattern[i] == 6 || toothPattern[i] == 7) 
+    if (toothPattern[i] == 2 || toothPattern[i] == 3 || toothPattern[i] == 6 || toothPattern[i] == 7 || toothPattern[i] == 0xb || toothPattern[i] == 0xa || toothPattern[i] == 0xf || toothPattern[i] == 0xe) 
     {
       if(lastState == 0) { c.lineTo(newEnd, depth); }
       c.lineTo(newEnd, 0);
       lastState = 1;
-    } else if (toothPattern[i] == 0 || toothPattern[i] == 1 || toothPattern[i] == 4 || toothPattern[i] == 5) 
+    } else if (toothPattern[i] == 0 || toothPattern[i] == 1 || toothPattern[i] == 4 || toothPattern[i] == 5 || toothPattern[i] == 8 || toothPattern[i] == 9 || toothPattern[i] == 0xc || toothPattern[i] == 0xd) 
     {
       if(lastState == 1) { c.lineTo(newEnd, 0); }
       c.lineTo(newEnd, depth);
@@ -116,12 +116,12 @@ function draw_third_scope(toothPattern, depth, radius, width, line) {
     
     newEnd = lastEnd + toothWidth;
 
-    if (toothPattern[i] == 4 || toothPattern[i] == 5 || toothPattern[i] == 6 || toothPattern[i] == 7) 
+    if (toothPattern[i] == 4 || toothPattern[i] == 5 || toothPattern[i] == 6 || toothPattern[i] == 7 || toothPattern[i] == 0xf || toothPattern[i] == 0xe || toothPattern[i] == 0xc || toothPattern[i] == 0xd) 
     {
       if(lastState == 0) { c.lineTo(newEnd, depth); }
       c.lineTo(newEnd, 0);
       lastState = 1;
-    } else if (toothPattern[i] == 0 || toothPattern[i] == 1 || toothPattern[i] == 2 || toothPattern[i] == 3) 
+    } else if (toothPattern[i] == 0 || toothPattern[i] == 1 || toothPattern[i] == 2 || toothPattern[i] == 3 || toothPattern[i] == 8 || toothPattern[i] == 9 || toothPattern[i] == 0xa || toothPattern[i] == 0xb) 
     {
       if(lastState == 1) { c.lineTo(newEnd, 0); }
       c.lineTo(newEnd, depth);
