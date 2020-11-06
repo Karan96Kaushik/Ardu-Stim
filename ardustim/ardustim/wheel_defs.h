@@ -73,6 +73,7 @@
    SIX_MINUS_ONE_WITH_CAM,/* 6-1 crank + cam */
    TWELVE_MINUS_ONE_WITH_CAM, /* 12-1 crank + cam */
    HYUNDAI_I10,
+   MARUTI_DZIRE,
    MAX_WHEELS,
  }WheelType;
 
@@ -89,6 +90,7 @@
  const char six_minus_one_with_cam_friendly_name[] PROGMEM = "6-1 crank with cam";
  const char twelve_minus_one_with_cam_friendly_name[] PROGMEM = "12-1 crank with cam";
  const char hyundai_i10_friendly_name[] PROGMEM = "Hyundai i10";
+ const char maruti_dzire_friendly_name[] PROGMEM = "Maruti Suzuki Swift Dzire";
  
 
  /* Very simple 50% duty cycle */

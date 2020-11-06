@@ -75,6 +75,7 @@ wheels Wheels[MAX_WHEELS] = {
   { six_minus_one_with_cam_friendly_name, six_minus_one_with_cam, 0.15, 36, 720 },
   { twelve_minus_one_with_cam_friendly_name, twelve_minus_one_with_cam, 0.6, 144, 720 },
   { hyundai_i10_friendly_name, hyundai_i10, 1, 120, 720 },
+  { maruti_dzire_friendly_name, maruti_dzire, 1, 120, 720 },
 };
 
 /* Initialization */
