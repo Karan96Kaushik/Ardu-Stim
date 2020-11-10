@@ -74,6 +74,8 @@
    TWELVE_MINUS_ONE_WITH_CAM, /* 12-1 crank + cam */
    HYUNDAI_I10,
    MARUTI_DZIRE,
+   MARUTI_DZIRE_2,
+   MARUTI_DZIRE_DRV,
    MAX_WHEELS,
  }WheelType;
 
@@ -91,6 +93,8 @@
  const char twelve_minus_one_with_cam_friendly_name[] PROGMEM = "12-1 crank with cam";
  const char hyundai_i10_friendly_name[] PROGMEM = "Hyundai i10";
  const char maruti_dzire_friendly_name[] PROGMEM = "Maruti Suzuki Swift Dzire";
+ const char maruti_dzire_friendly_name_2[] PROGMEM = "Maruti Suzuki Swift Dzire - Nov 11";
+ const char maruti_dzire_friendly_name_drv[] PROGMEM = "Maruti Suzuki Swift Dzire - DRV - Nov 11";
  
 
  /* Very simple 50% duty cycle */
@@ -259,6 +263,7 @@
      0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,
      0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,
      0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0000,0b0000,0b0000,0b0000,
+
      0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,
      0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,
      0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,
@@ -271,6 +276,68 @@
      0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,
      0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,
      0b0001,0b1000,0b0001,0b1000,0b0001,0b1000,0b0000,0b0000,0b0000,0b0000
+   };
+
+
+   /* Maruti Suzuki Swift DZire Diesel having 2 crankshaft position sensors, one camshaft position sensor, and one Bosch CR-DRV */
+   const unsigned char maruti_suzuki_swift_dzire_diesel_2[] PROGMEM =
+   {
+     0b001,0b010,0b001,0b010,0b001,0b010,0b001,0b010,0b001,0b010,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b100,0b100,0b100,
+
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b110,
+     0b101,0b110,0b101,0b110,0b101,0b110,0b101,0b100,0b100,0b100,
+
+
+   };
+
+
+   /* Maruti Suzuki Swift DZire Diesel having 2 crankshaft position sensors, one camshaft position sensor, and one Bosch CR-DRV */
+   const unsigned char maruti_suzuki_swift_dzire_diesel_drv[] PROGMEM =
+   {
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1,  /* teeth 1-5 */ 
+     0,1,1,1,1,1  /* teeth 1-5 */ 
    };
 
   #endif

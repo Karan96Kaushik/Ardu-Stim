@@ -76,6 +76,8 @@ wheels Wheels[MAX_WHEELS] = {
   { twelve_minus_one_with_cam_friendly_name, twelve_minus_one_with_cam, 0.6, 144, 720 },
   { hyundai_i10_friendly_name, hyundai_i10, 1, 120, 720 },
   { maruti_dzire_friendly_name, maruti_suzuki_swift_dzire_diesel, 1, 120, 720 },
+  { maruti_dzire_friendly_name_2, maruti_suzuki_swift_dzire_diesel_2, 1.0, 240, 720 },
+  { maruti_dzire_friendly_name_drv, maruti_suzuki_swift_dzire_diesel_drv, 1.0, 40, 360 },
 };
 
 /* Initialization */
