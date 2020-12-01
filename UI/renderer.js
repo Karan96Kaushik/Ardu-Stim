@@ -10,6 +10,8 @@ var isConnected=false;
 var currentRPM = 0;
 var initComplete = false;
 
+var SP = "/dev/ttyACM0"
+
 function refreshSerialPorts()
 {
     serialport.list((err, ports) => {
@@ -57,8 +59,9 @@ function openSerialPort()
 {
     var e = document.getElementById('portsSelect');
     
-    console.log("Opening serial port: ", e.options[e.selectedIndex].value);
-    port = new serialport(e.options[e.selectedIndex].value, { baudRate: 115200 }, function (err) {
+    console.log("Opening serial port: ", SP);
+    // console.log("Opening serial port: ", e.options[e.selectedIndex].value);
+    port = new serialport(SP, { baudRate: 115200 }, function (err) {
         if (err) {
           return console.log('Error: ', err.message)
         }
@@ -346,7 +349,7 @@ function refreshPattern(data)
       //Drop the modal loading window
       modalLoading.remove();
       //Move to the Live tab
-      window.location.hash = '#live';
+      window.location.hash = '#config';
       enableRPM();
       initComplete = true;
     }
@@ -570,9 +573,10 @@ function checkForUpdates()
 
 window.onload = function () 
 {
-    refreshSerialPorts();
+    // refreshSerialPorts();
     redrawGears(toothPatterns[0]);
-    window.location.hash = '#connect';
+    window.location.hash = '#config';
+    openSerialPort();
     checkForUpdates();
     document.getElementById('versionSpan').innerHTML = remote.app.getVersion();
     //animateGauges();
